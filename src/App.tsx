@@ -1,11 +1,19 @@
-import {StyleSheet, Text, View} from 'react-native';
-import React from 'react';
+import {SafeAreaView, StatusBar, StyleSheet, Text, View} from 'react-native';
+import React, {useState} from 'react';
+import {currencyByRupee} from './constants';
+import CurrencyButton from './components/CurrencyButton';
+import Snackbar from 'react-native-snackbar';
 
 const App = () => {
+  const [inputValue, setInputValue] = useState('');
+  const [resultValue, setResultValue] = useState('');
+  const [targetCurrency, setTargetCurrency] = useState('');
+
   return (
-    <View>
-      <Text>App</Text>
-    </View>
+    <SafeAreaView>
+      <StatusBar />
+      <View></View>
+    </SafeAreaView>
   );
 };
 
