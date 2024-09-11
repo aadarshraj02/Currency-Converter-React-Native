@@ -1,4 +1,6 @@
 import {
+  FlatList,
+  Pressable,
   SafeAreaView,
   StatusBar,
   StyleSheet,
@@ -55,6 +57,24 @@ const App = () => {
               placeholder="Enter Amount"
             />
           </View>
+          {resultValue && <Text style={styles.resultTxt}>{resultValue}</Text>}
+        </View>
+        <View style={styles.bottomContainer}>
+          <FlatList
+            numColumns={3}
+            data={currencyByRupee}
+            keyExtractor={item => item.name}
+            renderItem={({item}) => (
+              <Pressable
+                style={[
+                  styles.button,
+                  targetCurrency == item.name && styles.selected,
+                ]}
+                onPress={() => buttonPressed(item)}>
+                {<CurrencyButton {...item} />}
+              </Pressable>
+            )}
+          />
         </View>
       </View>
     </SafeAreaView>
