@@ -95,12 +95,11 @@ const styles = StyleSheet.create({
   },
   resultTxt: {
     fontSize: 32,
-    color: '#000000',
+    color: '#fff',
     fontWeight: '800',
   },
   rupee: {
     marginRight: 8,
-
     fontSize: 22,
     color: '#000000',
     fontWeight: '800',
@@ -122,10 +121,8 @@ const styles = StyleSheet.create({
   },
   button: {
     flex: 1,
-
     margin: 12,
-    height: 60,
-
+    height: 80,
     borderRadius: 12,
     backgroundColor: '#fff',
     elevation: 2,
