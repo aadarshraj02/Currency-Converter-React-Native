@@ -1,4 +1,11 @@
-import {SafeAreaView, StatusBar, StyleSheet, Text, View} from 'react-native';
+import {
+  SafeAreaView,
+  StatusBar,
+  StyleSheet,
+  Text,
+  TextInput,
+  View,
+} from 'react-native';
 import React, {useState} from 'react';
 import {currencyByRupee} from './constants';
 import CurrencyButton from './components/CurrencyButton';
@@ -35,7 +42,21 @@ const App = () => {
   return (
     <SafeAreaView>
       <StatusBar />
-      <View></View>
+      <View style={styles.container}>
+        <View style={styles.topContainer}>
+          <View style={styles.rupeesContainer}>
+            <Text style={styles.rupee}>₹</Text>
+            <TextInput
+              maxLength={10}
+              value={inputValue}
+              clearButtonMode="always"
+              onChangeText={setInputValue}
+              keyboardType="number-pad"
+              placeholder="Enter Amount"
+            />
+          </View>
+        </View>
+      </View>
     </SafeAreaView>
   );
 };
