@@ -13,7 +13,7 @@ import {currencyByRupee} from './constants';
 import CurrencyButton from './components/CurrencyButton';
 import Snackbar from 'react-native-snackbar';
 
-const App = () => {
+const App = (): JSX.Element => {
   const [inputValue, setInputValue] = useState('');
   const [resultValue, setResultValue] = useState('');
   const [targetCurrency, setTargetCurrency] = useState('');
@@ -42,7 +42,7 @@ const App = () => {
   };
 
   return (
-    <SafeAreaView>
+    <>
       <StatusBar />
       <View style={styles.container}>
         <View style={styles.topContainer}>
@@ -77,7 +77,7 @@ const App = () => {
           />
         </View>
       </View>
-    </SafeAreaView>
+    </>
   );
 };
 
